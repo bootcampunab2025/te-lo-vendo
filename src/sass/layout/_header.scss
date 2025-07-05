@@ -1,29 +1,41 @@
 
+header{
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
-
-  .logo {
+  padding: 12px 40px;
+  .navbar-brand {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
   }
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-
-    li a {
-      text-decoration: none;
+    .nav-link {
       color: $text-dark;
-      font-weight: 500;
-
+      font-size: 0.95rem;
+ 
       &:hover {
         color: $primary-color;
       }
-    }
+    
+  }
+  .search-input {
+    background: url('../img/icons/search.svg') no-repeat scroll 10px center;
+    background-size: 16px;
+    padding-left: 36px;
+    border: none;
+    background-color: $bg-brown;
+  }
+
+  .search-input::placeholder {
+    color: $text-brown;
+    font-size: 0.875rem; 
+  }
+
+  .cart-btn{
+    background-color: $bg-brown;
+    color: $text-brown;
   }
 }
