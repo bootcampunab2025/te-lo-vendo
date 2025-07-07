@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Te lo Vendo</title>
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
+    defer></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg px-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Te lo vendo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <form class="d-flex" role="search">
+              <input class="form-control navbar__search" type="search" placeholder="Buscar" aria-label="Search">
+            </form>
+            <div>
+              <button class="btn navbar__cart-btn" type="button"><span><img src="./src/img/icons/cart.svg" alt="carrito de compras"></span></button>
+            </div>
+            <div>
+              <button class="btn navbar__user-btn" type="button"><span><img src="./src/img/icons/user-example.svg" alt="perfil de usuario"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero__content">
+        <h1 class="contact-hero__title">Contacto</h1>
+        <p class="contact-hero__subtitle">Estamos aquí para ayudarte</p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="contact-content__container">
+        <div class="contact-form">
+          <h2 class="contact-form__title">Envíanos un Mensaje</h2>
+          <form class="contact-form__form">
+            <div class="contact-form__group">
+              <label for="name" class="contact-form__label">Nombre completo</label>
+              <input type="text" id="name" name="name" class="contact-form__input" required>
+            </div>
+            
+            <div class="contact-form__group">
+              <label for="email" class="contact-form__label">Correo electrónico</label>
+              <input type="email" id="email" name="email" class="contact-form__input" required>
+            </div>
+            
+            <div class="contact-form__group">
+              <label for="subject" class="contact-form__label">Asunto</label>
+              <select id="subject" name="subject" class="contact-form__select" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="general">Consulta general</option>
+                <option value="product">Pregunta sobre producto</option>
+                <option value="order">Estado de pedido</option>
+                <option value="return">Devolución</option>
+                <option value="technical">Problema técnico</option>
+              </select>
+            </div>
+            
+            <div class="contact-form__group">
+              <label for="message" class="contact-form__label">Mensaje</label>
+              <textarea id="message" name="message" rows="5" class="contact-form__textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="contact-form__btn">Enviar Mensaje</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2 class="contact-info__title">Información de Contacto</h2>
+          
+          <div class="contact-info__item">
+            <h3 class="contact-info__item-title">Dirección</h3>
+            <p class="contact-info__item-text">
+              Calle Principal 123<br>
+              Ciudad, Estado 12345<br>
+              País
+            </p>
+          </div>
+          
+          <div class="contact-info__item">
+            <h3 class="contact-info__item-title">Teléfono</h3>
+            <p class="contact-info__item-text">+1 (555) 123-4567</p>
+          </div>
+          
+          <div class="contact-info__item">
+            <h3 class="contact-info__item-title">Email</h3>
+            <p class="contact-info__item-text">info@telovendo.com</p>
+          </div>
+          
+          <div class="contact-info__item">
+            <h3 class="contact-info__item-title">Horario de Atención</h3>
+            <p class="contact-info__item-text">
+              Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+              Sábados: 10:00 AM - 4:00 PM<br>
+              Domingos: Cerrado
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__content">
+      <p class="main-footer__links">
+        <a href="#">Términos de Servicio</a>
+        <span class="main-footer__separator">|</span>
+        <a href="#">Política de Privacidad</a>
+        <span class="main-footer__separator">|</span>
+        <a href="contact.html">Contáctanos</a>
+      </p>
+      <p class="main-footer__copyright">©2025 Te lo Vendo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
