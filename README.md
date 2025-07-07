@@ -383,8 +383,6 @@ sass src/sass/main.scss src/css/main.css --watch
 
 ## Contacto y Soporte
 
-Para preguntas sobre el desarrollo o sugerencias de mejora:
-- Email: info@telovendo.com
 - Documentación: Este archivo README.md
 - Código fuente: Disponible en el repositorio del proyecto
 
