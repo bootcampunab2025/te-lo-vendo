@@ -1,0 +1,80 @@
+/* Responsive Images - Global Enhancement */
+/* This file provides additional responsive image enhancements */
+
+/* Ensure all images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Additional responsive fixes for specific cases */
+.product-card img,
+.category-card img,
+.news-card img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Force responsive behavior for any missed images */
+.hero-image img,
+.banner-image img,
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive enhancement for small screens */
+@media (max-width: 576px) {
+  .product-card__image,
+  .category-card__image,
+  .product-detail__main-image {
+    border-radius: 5px;
+  }
+  
+  .hero {
+    border-radius: 0.5rem;
+  }
+}
+
+/* Responsive enhancement for extra small screens */
+@media (max-width: 320px) {
+  .product-card__content,
+  .category-card__content {
+    padding: 0.75rem;
+  }
+  
+  .product-card__title,
+  .category-card__title {
+    font-size: 0.9rem;
+  }
+  
+  .product-card__description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Print media styles */
+@media print {
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  
+  .product-card__image,
+  .category-card__image {
+    height: auto !important;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-card__image img,
+  .category-card__image img,
+  .hero {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}

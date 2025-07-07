@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca del Proyecto - Te lo Vendo</title>
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
+    defer></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg px-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Te lo vendo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <form class="d-flex" role="search">
+              <input class="form-control navbar__search" type="search" placeholder="Buscar" aria-label="Search">
+            </form>
+            <div>
+              <button class="btn navbar__cart-btn" type="button"><span><img src="./src/img/icons/cart.svg" alt="carrito de compras"></span></button>
+            </div>
+            <div>
+              <button class="btn navbar__user-btn" type="button"><span><img src="./src/img/icons/user-example.svg" alt="perfil de usuario"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="about-hero__content">
+        <h1 class="about-hero__title">Acerca del Proyecto</h1>
+        <p class="about-hero__subtitle">Conoce más sobre nuestra plataforma de comercio electrónico</p>
+      </div>
+    </section>
+
+    <section class="about-content">
+      <article class="about-content__section">
+        <h2 class="about-content__title">Objetivos del Portal</h2>
+        <div class="about-content__grid">
+          <div class="about-content__item">
+            <h3>Facilitar el Comercio</h3>
+            <p>Crear una plataforma intuitiva que conecte compradores y vendedores de manera eficiente y segura.</p>
+          </div>
+          <div class="about-content__item">
+            <h3>Experiencia de Usuario</h3>
+            <p>Proporcionar una interfaz moderna, accesible y responsive que funcione en todos los dispositivos.</p>
+          </div>
+          <div class="about-content__item">
+            <h3>Catálogo Organizado</h3>
+            <p>Ofrecer una navegación clara por categorías para encontrar productos de manera rápida y sencilla.</p>
+          </div>
+          <div class="about-content__item">
+            <h3>Información Detallada</h3>
+            <p>Presentar fichas completas de productos con imágenes de calidad y descripciones precisas.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="about-content__section">
+        <h2 class="about-content__title">Equipo Responsable</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-member__info">
+              <h3 class="team-member__name">Noemi Fagerstrom</h3>
+              <p class="team-member__role">Desarrolladora Frontend</p>
+              <p class="team-member__description">
+                Responsable del diseño y desarrollo de la interfaz de usuario, implementación de HTML semántico,
+                arquitectura CSS con metodología BEM y optimización de la experiencia de usuario.
+              </p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__info">
+              <h3 class="team-member__name">Nelson Valenzuela</h3>
+              <p class="team-member__role">Desarrollador Frontend</p>
+              <p class="team-member__description">
+                Especialista en el desarrollo de componentes interactivos, implementación de JavaScript
+                y optimización del rendimiento de la aplicación web.
+              </p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__info">
+              <h3 class="team-member__name">Patricio Barahona</h3>
+              <p class="team-member__role">Desarrollador Frontend</p>
+              <p class="team-member__description">
+                Encargado de la implementación responsive, accesibilidad web y 
+                integración de frameworks CSS para una experiencia de usuario óptima.
+              </p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__info">
+              <h3 class="team-member__name">Juan Pablo Berrios</h3>
+              <p class="team-member__role">Desarrollador Frontend</p>
+              <p class="team-member__description">
+                Especialista en estructura de proyectos, versionado de código y
+                implementación de buenas prácticas de desarrollo frontend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="about-content__section">
+        <h2 class="about-content__title">Tecnologías Implementadas</h2>
+        <div class="tech-stack">
+          <div class="tech-stack__item">
+            <h4>HTML5 Semántico</h4>
+            <p>Estructura accesible con etiquetas semánticas para mejor SEO y usabilidad.</p>
+          </div>
+          <div class="tech-stack__item">
+            <h4>CSS/SCSS con BEM</h4>
+            <p>Arquitectura escalable de estilos usando metodología BEM para mantener código limpio.</p>
+          </div>
+          <div class="tech-stack__item">
+            <h4>Bootstrap 5</h4>
+            <p>Framework CSS para componentes responsivos y sistema de grid.</p>
+          </div>
+          <div class="tech-stack__item">
+            <h4>Diseño Responsivo</h4>
+            <p>Adaptación completa a dispositivos móviles, tablets y desktop.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__content">
+      <p class="main-footer__links">
+        <a href="#">Términos de Servicio</a>
+        <span class="main-footer__separator">|</span>
+        <a href="#">Política de Privacidad</a>
+        <span class="main-footer__separator">|</span>
+        <a href="contact.html">Contáctanos</a>
+      </p>
+      <p class="main-footer__copyright">©2025 Te lo Vendo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

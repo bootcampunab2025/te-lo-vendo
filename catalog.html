@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo - Te lo Vendo</title>
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
+    defer></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg px-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Te lo vendo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalog.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <form class="d-flex" role="search">
+              <input class="form-control navbar__search" type="search" placeholder="Buscar" aria-label="Search">
+            </form>
+            <div>
+              <button class="btn navbar__cart-btn" type="button"><span><img src="./src/img/icons/cart.svg" alt="carrito de compras"></span></button>
+            </div>
+            <div>
+              <button class="btn navbar__user-btn" type="button"><span><img src="./src/img/icons/user-example.svg" alt="perfil de usuario"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="catalog-hero__content">
+        <h1 class="catalog-hero__title">Catálogo de Productos</h1>
+        <p class="catalog-hero__subtitle">Explora nuestra selección por categorías</p>
+      </div>
+    </section>
+
+    <section class="catalog-filters">
+      <div class="catalog-filters__container">
+        <h2 class="catalog-filters__title">Filtrar por Categoría</h2>
+        <div class="catalog-filters__buttons">
+          <button class="catalog-filter-btn catalog-filter-btn--active" data-category="all">Todos</button>
+          <button class="catalog-filter-btn" data-category="furniture">Muebles</button>
+          <button class="catalog-filter-btn" data-category="decor">Decoración</button>
+          <button class="catalog-filter-btn" data-category="lighting">Iluminación</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-grid">
+      <div class="catalog-grid__container">
+        <article class="product-card" data-category="furniture">
+          <div class="product-card__image">
+            <img src="./src/img/Sofa.jpg" alt="Sofá de Lujo Moderno">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Sofá de Lujo Moderno</h3>
+            <p class="product-card__category">Muebles</p>
+            <p class="product-card__price">$1.299.990</p>
+            <p class="product-card__description">Sofá de 3 plazas con tapizado de tela premium y estructura de madera sólida.</p>
+            <a href="product-detail.html?id=1" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="furniture">
+          <div class="product-card__image">
+            <img src="./src/img/DiningSet.jpg" alt="Mesa de Comedor Elegante">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Mesa de Comedor Elegante</h3>
+            <p class="product-card__category">Muebles</p>
+            <p class="product-card__price">$899.990</p>
+            <p class="product-card__description">Mesa de comedor para 6 personas con acabado en madera natural.</p>
+            <a href="product-detail.html?id=2" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="decor">
+          <div class="product-card__image">
+            <img src="./src/img/ArtColection.jpg" alt="Colección de Arte Moderno">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Colección de Arte Moderno</h3>
+            <p class="product-card__category">Decoración</p>
+            <p class="product-card__price">$299.990</p>
+            <p class="product-card__description">Set de 3 cuadros con diseños abstractos contemporáneos.</p>
+            <a href="product-detail.html?id=3" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="decor">
+          <div class="product-card__image">
+            <img src="./src/img/Decor.jpg" alt="Elementos Decorativos">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Set Decorativo Premium</h3>
+            <p class="product-card__category">Decoración</p>
+            <p class="product-card__price">$159.990/p>
+            <p class="product-card__description">Conjunto de jarrones y elementos decorativos para el hogar.</p>
+            <a href="product-detail.html?id=4" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="lighting">
+          <div class="product-card__image">
+            <img src="./src/img/Lighting.jpg" alt="Lámpara de Diseño">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Lámpara de Diseño</h3>
+            <p class="product-card__category">Iluminación</p>
+            <p class="product-card__price">$249.990</p>
+            <p class="product-card__description">Lámpara de pie con diseño minimalista y luz LED regulable.</p>
+            <a href="product-detail.html?id=5" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="furniture">
+          <div class="product-card__image">
+            <img src="./src/img/Furniture.jpg" alt="Mueble Multifuncional">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Mueble Multifuncional</h3>
+            <p class="product-card__category">Muebles</p>
+            <p class="product-card__price">$449.990</p>
+            <p class="product-card__description">Mueble versátil con múltiples compartimentos de almacenamiento.</p>
+            <a href="product-detail.html?id=6" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__content">
+      <p class="main-footer__links">
+        <a href="#">Términos de Servicio</a>
+        <span class="main-footer__separator">|</span>
+        <a href="#">Política de Privacidad</a>
+        <span class="main-footer__separator">|</span>
+        <a href="contact.html">Contáctanos</a>
+      </p>
+      <p class="main-footer__copyright">©2025 Te lo Vendo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.catalog-filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          
+          filterButtons.forEach(btn => btn.classList.remove('catalog-filter-btn--active'));
+          this.classList.add('catalog-filter-btn--active');
+
+          productCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Te lo Vendo</title>
   <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
@@ -18,7 +19,7 @@
   <header class="main-header">
     <nav class="navbar navbar-expand-lg px-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Te lo vendo</a>
+        <a class="navbar-brand" href="index.html">Te lo vendo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,27 +27,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link nav-link--active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link" href="catalog.html">Catálogo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="about.html">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contacto</a>
             </li>
           </ul>
           <div class="d-flex align-items-center gap-3">
             <form class="d-flex" role="search">
-              <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control navbar__search" type="search" placeholder="Buscar" aria-label="Search">
             </form>
             <div>
-              <button class="btn cart-btn" type="button"><span><img src="./src/img/icons/cart.svg" alt="boton de carrito de compras"></span></button>
+              <button class="btn navbar__cart-btn" type="button"><span><img src="./src/img/icons/cart.svg" alt="carrito de compras"></span></button>
             </div>
             <div>
-              <button class="btn" type="button"><span><img src="./src/img/icons/user-example.svg" alt="boton de usuario"></span></button>
+              <button class="btn navbar__user-btn" type="button"><span><img src="./src/img/icons/user-example.svg" alt="perfil de usuario"></span></button>
             </div>
           </div>
         </div>
@@ -55,53 +56,112 @@
   </header>
   <main>
     <section class="hero">
-      <h1>Discover the Latest Trends</h1>
-      <p>Explore our curated collection of stylish and innovative products.</p>
-      <button class="button">Shop Now</button>
+      <h1 class="hero__title">Descubre las Últimas Tendencias</h1>
+      <p class="hero__subtitle">Explora nuestra colección seleccionada de productos elegantes e innovadores.</p>
+      <button class="button hero__btn">Explorar Catálogo</button>
+    </section>
+
+    <section class="news-section">
+      <h2 class="news-section__title">Novedades</h2>
+      <div class="news-section__grid">
+        <article class="news-card">
+          <div class="news-card__date">6 Enero 2025</div>
+          <h3 class="news-card__title">Nueva Colección de Primavera</h3>
+          <p class="news-card__description">Descubre los últimos diseños en mobiliario y decoración para renovar tu hogar.</p>
+        </article>
+        <article class="news-card">
+          <div class="news-card__date">3 Enero 2025</div>
+          <h3 class="news-card__title">Ofertas Especiales</h3>
+          <p class="news-card__description">Aprovecha descuentos de hasta 30% en productos seleccionados de iluminación.</p>
+        </article>
+        <article class="news-card">
+          <div class="news-card__date">28 Diciembre 2024</div>
+          <h3 class="news-card__title">Guía de Decoración</h3>
+          <p class="news-card__description">Consejos profesionales para crear espacios únicos con nuestros productos.</p>
+        </article>
+      </div>
     </section>
 
     <section class="featured-products">
-      <h2>Featured Products</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="./src/img/Sofa.jpg" alt="Sofa">
-          <h3>Cozy Comfort Sofa</h3>
-          <p>Sink into luxury with our plush sofa.</p>
-        </div>
-        <div class="card">
-          <img src="./src/img/DiningSet.jpg" alt="Dining Set">
-          <h3>Elegant Dining Set</h3>
-          <p>Dine in style with our sleek table.</p>
-        </div>
-        <div class="card">
-          <img src="./src/img/ArtColection.jpg" alt="Art Colection">
-          <h3>Modern Art Collection</h3>
-          <p>Elevate your space with our unique art.</p>
-        </div>
+      <h2 class="featured-products__title">Productos Destacados</h2>
+      <div class="featured-products__grid">
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="./src/img/Sofa.jpg" alt="Sofá de Lujo">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Sofá de Lujo Moderno</h3>
+            <p class="product-card__description">Sumérgete en el lujo con nuestro sofá de felpa premium.</p>
+            <a href="product-detail.html?id=1" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="./src/img/DiningSet.jpg" alt="Mesa de Comedor">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Mesa de Comedor Elegante</h3>
+            <p class="product-card__description">Cena con estilo con nuestra mesa elegante y moderna.</p>
+            <a href="product-detail.html?id=2" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__image">
+            <img src="./src/img/ArtColection.jpg" alt="Colección de Arte">
+          </div>
+          <div class="product-card__content">
+            <h3 class="product-card__title">Colección de Arte Moderno</h3>
+            <p class="product-card__description">Eleva tu espacio con nuestro arte único y contemporáneo.</p>
+            <a href="product-detail.html?id=3" class="product-card__link">Ver detalles</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="categories">
-      <h2>Shop by Category</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="./src/img/Furniture.jpg" alt="Furniture">
-          <h3>Furniture</h3>
-        </div>
-        <div class="card">
-          <img src="./src/img/Decor.jpg" alt="Decor">
-          <h3>Decor</h3>
-        </div>
-        <div class="card">
-          <img src="./src/img/Lighting.jpg" alt="Lighting">
-          <h3>Lighting</h3>
-        </div>
+      <h2 class="categories__title">Comprar por Categoría</h2>
+      <div class="categories__grid">
+        <article class="category-card">
+          <div class="category-card__image">
+            <img src="./src/img/Furniture.jpg" alt="Muebles">
+          </div>
+          <div class="category-card__content">
+            <h3 class="category-card__title">Muebles</h3>
+            <a href="catalog.html" class="category-card__link">Explorar</a>
+          </div>
+        </article>
+        <article class="category-card">
+          <div class="category-card__image">
+            <img src="./src/img/Decor.jpg" alt="Decoración">
+          </div>
+          <div class="category-card__content">
+            <h3 class="category-card__title">Decoración</h3>
+            <a href="catalog.html" class="category-card__link">Explorar</a>
+          </div>
+        </article>
+        <article class="category-card">
+          <div class="category-card__image">
+            <img src="./src/img/Lighting.jpg" alt="Iluminación">
+          </div>
+          <div class="category-card__content">
+            <h3 class="category-card__title">Iluminación</h3>
+            <a href="catalog.html" class="category-card__link">Explorar</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
-  <footer style="text-align:center; margin-top: 4rem;">
-    <p>Terms of Service &nbsp; | &nbsp; Privacy Policy &nbsp; | &nbsp; Contact Us</p>
-    <p>©2024 Te lo Vendo. All rights reserved.</p>
+  <footer class="main-footer">
+    <div class="main-footer__content">
+      <p class="main-footer__links">
+        <a href="#">Términos de Servicio</a>
+        <span class="main-footer__separator">|</span>
+        <a href="#">Política de Privacidad</a>
+        <span class="main-footer__separator">|</span>
+        <a href="contact.html">Contáctanos</a>
+      </p>
+      <p class="main-footer__copyright">©2025 Te lo Vendo. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
 </body>

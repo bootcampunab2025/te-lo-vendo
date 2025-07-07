@@ -1,15 +1,107 @@
 
 .button {
+  display: inline-block;
   background-color: $primary-color;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: $spacing-md $spacing-xl;
   border: none;
-  border-radius: 5px;
+  border-radius: $border-radius-md;
   font-size: 1rem;
+  font-weight: 500;
+  font-family: $font-main;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  line-height: 1.5;
 
   &:hover {
     background-color: darken($primary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    color: white;
   }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $text-dark;
+    border: 2px solid $text-dark;
+
+    &:hover {
+      background-color: $text-dark;
+      color: white;
+    }
+  }
+
+  &--large {
+    padding: $spacing-lg $spacing-xxl;
+    font-size: 1.125rem;
+  }
+
+  &--small {
+    padding: $spacing-sm $spacing-md;
+    font-size: 0.875rem;
+  }
+
+  &--full-width {
+    width: 100%;
+    display: block;
+  }
+
+  &--disabled {
+    background-color: $text-light;
+    color: white;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: $text-light;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.button--loading {
+  position: relative;
+  color: transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
